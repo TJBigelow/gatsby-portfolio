@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //Defines what 1 rem is
+  scroll-behavior: smooth;
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%;
+  // }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 35%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-attachment: fixed;
+}
+
+.background {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-color: $color-primary-dark;
+  z-index: -1;
+}

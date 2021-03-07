@@ -1,0 +1,46 @@
+.job {
+  @include container;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  &__image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 20rem;
+  }
+
+  &__company {
+    font-size: 4rem;
+
+    &-link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-dark-grey;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-primary-dark;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__location,
+  &__dates {
+    font-size: 1.5rem;
+  }
+
+  &__responsibilities {
+    padding: $default-font-size;
+    // list-style: none;
+  }
+}

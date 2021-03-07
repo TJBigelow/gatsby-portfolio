@@ -1,0 +1,28 @@
+.socials {
+  margin: 1rem 0;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 4.5rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-dark-grey;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-dark;
+    }
+  }
+}

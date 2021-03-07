@@ -1,0 +1,107 @@
+.project {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
+  &--right {
+    text-align: right;
+    grid-template-columns: 2fr 1fr;
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+
+    .project__tech-list {
+      right: 3rem;
+      @media (max-width: 800px) {
+        right: unset;
+      }
+    }
+
+    .project__description-box {
+      padding-left: 2rem;
+      padding-right: 0;
+      @media (max-width: 800px) {
+        padding: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem rgba($color: black, $alpha: 0.3);
+    grid-row: 1/2;
+  }
+
+  &__description-box {
+    padding-right: 2rem;
+    padding-top: 2rem;
+    @media (max-width: 800px) {
+      text-align: center;
+      grid-row: 2/3;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__links {
+    list-style: none;
+    padding-bottom: 2rem;
+  }
+
+  &__link-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 0.7rem;
+    }
+  }
+
+  &__link {
+    font-size: 2.5rem;
+    &:visited,
+    &:link {
+      color: $color-dark-grey;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-dark;
+    }
+  }
+
+  &__description {
+    font-size: $default-font-size;
+    @media (max-width: 800px) {
+      width: 50%;
+      margin: auto;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__tech-list {
+    position: absolute;
+    bottom: 3rem;
+    list-style: none;
+    @media (max-width: 800px) {
+      position: relative;
+      bottom: unset;
+    }
+  }
+
+  &__tech-item {
+    display: inline-block;
+  }
+
+  &__tech-icon {
+    width: 3rem;
+  }
+}

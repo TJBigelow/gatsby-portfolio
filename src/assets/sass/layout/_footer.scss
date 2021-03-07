@@ -1,0 +1,13 @@
+.footer {
+  height: 5rem;
+  position: relative;
+  background-color: $color-dark-grey;
+
+  &__copyright {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

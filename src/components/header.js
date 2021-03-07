@@ -15,7 +15,7 @@ const header = () => {
                 href="https://www.linkedin.com/in/tjbigelow/"
                 aria-label="LinkedIn"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
                 className="socials__link"
               >
                 <i className="fab fa-linkedin"></i>
@@ -26,7 +26,7 @@ const header = () => {
                 href="https://github.com/TJBigelow"
                 aria-label="GitHub"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
                 className="socials__link"
               >
                 <i className="fab fa-github-square"></i>

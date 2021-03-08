@@ -3,7 +3,7 @@ import React from "react"
 const renderSkills = skills => {
   return skills.map(skill => {
     return (
-      <li className="skill-box__item">
+      <li className="skill-box__item" key={skill}>
         <span className="skill-box__name">{skill}</span>
       </li>
     )

@@ -31,7 +31,9 @@ const skillBoxes = [
 
 const renderSkillBoxes = () => {
   return skillBoxes.map(box => {
-    return <SkillBox heading={box.heading} skills={box.skills} />
+    return (
+      <SkillBox heading={box.heading} skills={box.skills} key={box.heading} />
+    )
   })
 }
 
